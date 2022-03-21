@@ -1,0 +1,15 @@
+{
+  "name": "clash-analyser",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "kira0x1 <kira.eva@protonmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "dotenv": "^16.0.0",
+    "twisted": "^1.46.5"
+  }
+}
