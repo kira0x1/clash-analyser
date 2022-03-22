@@ -1,7 +1,7 @@
 {
   "name": "clash-analyser",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "out/index.js",
   "author": "kira0x1 <kira.eva@protonmail.com>",
   "license": "MIT",
   "scripts": {
@@ -11,5 +11,8 @@
     "chalk": "^5.0.1",
     "dotenv": "^16.0.0",
     "twisted": "^1.46.5"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.22"
   }
 }
