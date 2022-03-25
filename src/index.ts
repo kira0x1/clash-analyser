@@ -1,14 +1,11 @@
-import * as config from "./config";
-import { LolApi, Constants } from "twisted";
+import { Regions } from 'twisted/dist/constants';
+import * as api from './api';
 
-const api = new LolApi(config.riotKey);
-
-async function summonerByNameExample() {
-  const res = await api.Summoner.getByName(
-    "Hide on bush",
-    Constants.Regions.KOREA
-  );
-  console.dir(res.response, { depth: 5 });
+async function main() {
+   const account = new api.SummonerApi('SpeckIsBoosted', Regions.EU_WEST);
+   const matches = await account.getMatches();
+   const firstMatch = await account.getMatch(matches[0]);
+   api.saveInfoToJson('firstMatch.json', firstMatch);
 }
 
-summonerByNameExample();
+main();
